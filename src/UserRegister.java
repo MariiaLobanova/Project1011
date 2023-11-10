@@ -1,11 +1,10 @@
-import java.util.Map;
 import java.util.Scanner;
 
-public class RegisterUser {
+public class UserRegister {
     private UserManager userManager;
     Scanner scanner;
 
-    public RegisterUser(UserManager userManager, Scanner scanner) {
+    public UserRegister(UserManager userManager, Scanner scanner) {
         this.userManager = userManager;
         this.scanner = scanner;
     }

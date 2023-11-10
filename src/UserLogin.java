@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class LoginUser {
+public class UserLogin {
     UserManager userManager;
     Scanner scanner;
 
-    public LoginUser(UserManager userManager, Scanner scanner) {
+    public UserLogin(UserManager userManager, Scanner scanner) {
         this.userManager = userManager;
         this.scanner = scanner;
     }

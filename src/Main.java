@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         UserManager userManager= new UserManager();
@@ -48,7 +46,56 @@ public class Main {
             userCRUD.searchUser("balala");
 
             User[] usersArray = userManager.convertMapTOArray();
-            UserFileWriter.writeUsersToFile(usersArray, "Users Data.txt");
+            DataFileWriter.writeUsersToFile(usersArray, "Users Data.txt");
+
+            StudentManager studentManager= new StudentManager();
+            studentManager.createStudent("Moana", 123);
+            studentManager.createStudent("Victor", 345);
+            studentManager.createStudent("Elena", 128);
+            studentManager.createStudent("Elisa", 335);
+
+            studentManager.displayAllStudents();
+
+            studentManager.removeStudent("Victor");
+
+            studentManager.displayAllStudents();
+
+            studentManager.updateStudent("Elisa", 987);
+            studentManager.displayAllStudents();
+
+        Student[] studentsArray = studentManager.convertStudentsMapTOArray();
+        DataFileWriter.writeStudentsToFile(studentsArray, "Students Data.txt");
+
+        CourseManager courseManager = new CourseManager();
+        courseManager.createCourse("Biology", 1);
+        courseManager.createCourse("Math", 2);
+        courseManager.createCourse("English", 3);
+        courseManager.createCourse("Sport", 4);
+        courseManager.createCourse("German", 5);
+
+        Student moana = new Student("Moana", 123);
+        Student elena = new Student("Elena", 128);
+
+        Course biology = new Course(moana.studentName, moana.id);
+
+        biology.addStudentToCourse(moana);
+        biology.addStudentToCourse(elena);
+
+        biology.updateGrade(moana, 70.00);
+        biology.updateGrade(elena, 90.00);
+
+        biology.displayGrades();
+
+
+        StudentSearching  search = new StudentSearching(studentManager);
+        search.searchStudentByName(moana.studentName);
+        search.searchStudentById(987);
+
+        Sorting sort = new Sorting();
+        sort.
+
+
+
 
 
         }
