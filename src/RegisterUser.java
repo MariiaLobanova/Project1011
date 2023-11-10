@@ -11,10 +11,9 @@ public class RegisterUser {
     }
     public void  registerUser(){
         System.out.println("Enter User name for register: ");
+        scanner.nextLine();
         String username = scanner.nextLine();
-        //scanner.nextLine();
         System.out.println("Enter password: ");
-        //scanner.nextLine();
         String password = scanner.nextLine();
         System.out.println("Choose your role ");
         System.out.println("'1'-ADMIN; 'n\''2'-TEACHER; 'n\''3'-STUDENT");
@@ -37,7 +36,7 @@ public class RegisterUser {
                 role = Role.STUDENT;
         }
         userManager.registerUser(username,password,role);
-        scanner.close();
+
 
     }
 }

@@ -1,0 +1,4 @@
+Name = Elsa : with role STUDENT
+Name = Olaf : with role STUDENT
+Name = Kristoff : with role ADMIN
+Name = Sebastian : with role TEACHER
